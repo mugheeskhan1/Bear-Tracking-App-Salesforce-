@@ -10,10 +10,6 @@ export default class BearList extends LightningElement {
     @wire(searchBears, { searchTerm: '$searchTerm' })
     bears;
 
-    appResources = {
-        bearSilhouette: `${ursusResources}/standing-bear-silhouette.png`,
-    };
-
     handleSearchTermChange(event) {
         // Debouncing this method: do not update the reactive property as
         // long as this function is being called within a delay of 300 ms.
